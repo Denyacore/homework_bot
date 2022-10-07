@@ -1,17 +1,16 @@
+import json
+import logging
 import os
 import sys
-import requests
 import time
-import logging
-import exceptions
-import json
-
 from http import HTTPStatus
-from dotenv import load_dotenv
 from logging.handlers import RotatingFileHandler
 
-
+import requests
 import telegram
+from dotenv import load_dotenv
+
+import exceptions
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -48,12 +47,7 @@ HOMEWORK_STATUSES = {
 
 
 def send_message(bot, message):
-    """Отправляет сообщение в Telegram чат,
-    определяемый переменной окружения TELEGRAM_CHAT_ID.
-    Принимает на вход два параметра:
-    экземпляр класса Bot
-    и строку с текстом сообщения."""
-
+    """Отправляет сообщение в Telegram чат."""
     try:
         bot.send_message(TELEGRAM_CHAT_ID, message)
         logger.info(f'Отправлено сообщение с текстом: {message}')
@@ -148,11 +142,7 @@ def parse_status(homework):
 
 
 def check_tokens():
-    """Проверяет доступность переменных окружения,
-    которые необходимы для работы программы.
-    Если отсутствует хотя бы одна переменная окружения —
-    функция должна вернуть False, иначе — True.
-    """
+    """Проверяет доступность переменных окружения."""
     logging.info('Проверка переменных окружения')
     if PRACTICUM_TOKEN and TELEGRAM_CHAT_ID and TELEGRAM_TOKEN is not None:
         logger.info('Все переменные доступны')
