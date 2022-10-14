@@ -13,19 +13,6 @@ from dotenv import load_dotenv
 import exceptions
 
 logger = logging.getLogger(__name__)
-# logger.setLevel(logging.DEBUG)
-# formatter = logging.Formatter(
-#     '%(asctime)s, %(levelname)s, %(message)s, %(name)s, %(lineno)d'
-# )
-# handler = logging.StreamHandler()
-# handler.setFormatter(formatter)
-# handler = RotatingFileHandler('main.log',
-#                               maxBytes=50000000,
-#                               backupCount=5,
-#                               encoding='UTF-8'
-#                               )
-# logger.addHandler(handler)
-
 
 load_dotenv()
 
