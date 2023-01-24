@@ -1,2 +1,1 @@
-# homework_bot
-python telegram bot
+# TG bot for check homework of Yandex.Practicum
