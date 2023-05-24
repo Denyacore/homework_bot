@@ -1,4 +1,4 @@
-# Tg bot for homework in Yandex.Practicum  by [Denyacore](https://github.com/Denyacore)
+# Tg bot for review notifications by [Denyacore](https://github.com/Denyacore)
 
 Бот работает с API Яндекс.Практикум, отслеживает статус последней домашней работы. При его изменении - оповещает.
 
